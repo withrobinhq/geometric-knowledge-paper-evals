@@ -1,0 +1,65 @@
+domains:
+  peps_packaging:
+    domain_id: peps-packaging
+    label: packaging standards
+    snapshot:
+      source: Python Enhancement Proposals
+      commit: c5f26d00ce0985c6499ec728b30f1753c48f9d3e
+      retrieved: 2026-10-20
+    scope: >-
+      Design decisions on Python project metadata, versions, dependencies,
+      pyproject.toml build interfaces, lock files, script metadata and
+      built-distribution formats with platform tags.
+    selection:
+      candidates_with_packaging_topic: 104
+      selected_sources: 49
+      exclusions:
+        - package-index and repository APIs
+        - index hosting and security policy
+        - installation-database and environment proposals
+        - governance
+    counts:
+      signals: 121
+      header_signals: 68
+      body_signals: 53
+      claims: 30
+      queries: 6
+      candidates_per_query: 6
+      supersession_links: 8
+      unique_superseded_signals: 7
+    limits:
+      - body Signals use abstracts and introductions rather than full discussion threads
+      - statuses are fixed at one snapshot
+      - Claims are interpretive pilot inputs
+
+  enron_direct_access:
+    domain_id: enron-direct-access
+    label: suspension of retail direct access, California 2000-2001
+    snapshot:
+      source: CMU Enron Email Dataset
+      release: 2015-05-07
+    scope: >-
+      One regulatory-affairs mailbox thread concerning retail direct access
+      during the California electricity crisis, including ABX 1, suspension,
+      exit fees, surcharges, negative CTC credits and core/noncore proposals.
+    selection:
+      custodian: dasovich-j
+      folder: all_documents
+      folder_messages: 11896
+      subject_matches: 249
+      personal_content_excluded: 4
+      accidental_subject_matches_excluded: 6
+      selected_messages: 239
+    counts:
+      messages: 239
+      messages_cited_by_signals: 26
+      signals: 56
+      claims: 30
+      queries: 6
+      candidates_per_query: 6
+      supersession_links: 1
+    limits:
+      - one custodian's view, not a neutral history
+      - most selected messages are not cited by a Signal
+      - source messages may identify private individuals
+      - the public companion omits raw messages and email bodies

@@ -1,0 +1,10 @@
+arm_id,name,index_contents,domain_scoping,standing_penalty_mu,dimension_features,query_projection,coefficient_fit,role_in_plan,registered,source
+i,hybrid baseline,Signals and Claims,scoped,none,none,no,none,reference for standing gain and scoping gain,yes,registered plan 10.1 (sha256 413b34d5)
+ii,hybrid plus standing penalty,Signals and Claims,scoped,fit alone on validation split,none,no,mu alone,reference for Dimension gain and both attribution checks,yes,registered plan 10.1
+iii,full reranker,Signals and Claims,scoped,fit jointly,"phi_d = r_d(c) * (1 - delta_d(pi_d(c), pi_d(q))) over A(c)",yes,beta_Dd and mu jointly by L1 pairwise LTR,system under test,yes,registered plan 10.1
+iv,permutation control,Signals and Claims,scoped,fit jointly,as iii with projection records shuffled across Claims within the Domain,yes,refit after shuffle,attribution check: geometry removed and mu survives,yes,registered plan 10.1
+v,Signals-only,Signals only (Claims removed),scoped,none,none,no,none,retrieval half of the alternative; thesis comparison,yes,registered plan 10.1
+vi,global retrieval,Signals and Claims,unscoped,none,none,no,none,reference for Domain-scoping gain,yes,registered plan 10.1
+vii,graph-augmented,Signals and Claims plus entity graph built as Edge et al. 2024,scoped,none,none,no,none,reference for graph gain,yes,registered plan 10.1
+viii,graph-augmented on Signals-only,Signals only plus entity graph (no Claims anywhere),scoped,none,none,no,none,graph-augmented half of the alternative; thesis comparison,yes,registered plan 10.1
+ix,facet-only,Signals and Claims,scoped,fit jointly,phi_d = r_d(c) over A(c) with the positional factor fixed at 1 (Dimensions act as relevance facets with no position),no,beta_Dd and mu jointly by the same L1 pairwise LTR and the same 20-configuration budget,post_hoc_attribution_check,post_hoc_unregistered,execution_record.yaml:post_hoc_analyses.arm_ix

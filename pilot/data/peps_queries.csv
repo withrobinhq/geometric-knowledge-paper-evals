@@ -1,0 +1,7 @@
+query_id,query,candidates
+PQ1,Why did the community stop writing one PEP per manylinux tag?,PC16|PC17|PC19|PC09|PC18|PC02
+PQ2,"Where should a project declare its dependencies today, and in what syntax?",PC06|PC11|PC07|PC15|PC13|PC23
+PQ3,Is the wheel format likely to change soon?,PC18|PC19|PC30|PC20|PC29|PC12
+PQ4,Can tools trust the metadata in a source distribution without building it?,PC04|PC26|PC05|PC03|PC28|PC21
+PQ5,How has the core metadata format changed over time?,PC01|PC02|PC03|PC27|PC23|PC22
+PQ6,"Which competing proposals lost, and why?",PC25|PC10|PC12|PC14|PC08|PC24

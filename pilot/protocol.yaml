@@ -1,0 +1,103 @@
+title: Pilot protocol for Dimension authoring and relevance judgments
+version: pilot-v1
+purpose:
+  - compare independently authored Dimension sets by meaning
+  - measure agreement on positions for matched Dimension pairs
+  - estimate variability in position and graded-relevance judgments
+
+public_files:
+  calibration: calibration.csv
+  packaging_domain: peps.csv
+  email_domain: enron.csv
+  derived_metrics: pilot_results.csv
+
+independence:
+  blind_to_peer: true
+  discuss_calibration_only_after_submission: true
+  prohibit_peer_sheets_before_submission: true
+  prohibit_match_metadata_before_submission: true
+  prohibit_ai_assistance_for_dimension_authoring: true
+  source_lookup_permitted_when_claim_unclear: true
+
+calibration:
+  items: 5
+  dimension: implementation_feasibility
+  dimensions_authored: false
+  key_included_in_public_csv: true
+  blind_status_recorded_per_annotator: true
+  purpose: shared understanding of levels, relevance and grades
+
+dimension_authoring:
+  maximum_dimensions_per_domain: 4
+  minimum_dimensions_per_domain: 1
+  contract_fields:
+    - name
+    - definition
+    - projection
+    - value_space
+    - comparison
+    - normalizer
+    - prototypes
+    - provenance
+    - version
+  value_spaces:
+    scalar: "0 to 1"
+    ordinal: "3 to 5 ordered named levels"
+  unordered_categories_allowed: false
+  prototypes_per_dimension: "2 to 5"
+  relevance_not_applicable_value: NR
+
+positioning:
+  ordinal_input: "level name or 1-based level number"
+  scalar_input: "number from 0 to 1"
+  not_relevant_input: NR
+  blank_authored_dimension_cells_allowed: false
+
+relevance_grades:
+  3: answers the query or is required to answer it
+  2: answers part of the query
+  1: concerns the topic but does not help answer the query
+  0: otherwise
+
+matching:
+  basis: Dimension definitions and prototypes
+  values:
+    - yes
+    - partial
+    - no
+  direction:
+    - same
+    - reversed
+  matched_axis_count: yes_only
+  partial_pairs_reported_separately: true
+  matcher: coordinator
+  ai_assisted: true
+
+quality_control:
+  preserve_independent_judgments: true
+  sheet_validation:
+    - no blank authored-Dimension position cells
+    - position belongs to value space or is NR
+    - comparison matches value-space type
+    - at least two valid prototypes
+  per_query_readjudication_trigger:
+    metric: Cohen kappa
+    threshold: 0.4
+  timing_available: false
+
+scoring:
+  script: scripts/score.py
+  comparison_order:
+    side_a: A
+    side_b: B
+  outputs:
+    - Dice share of matched Dimensions
+    - Krippendorff alpha on positions
+    - Spearman correlation on positions
+    - position coverage
+    - relevance applicability alpha
+    - Cohen kappa on grades
+    - ordinal alpha on grades
+    - exact grade agreement
+    - pooled per-item standard deviations
+    - across-query standard deviation of nDCG differences

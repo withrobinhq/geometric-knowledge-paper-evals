@@ -1,0 +1,165 @@
+schema_version: 1
+record_date: 2026-11-02
+record_status: post_registration
+
+paper:
+  title: Toward a Compositional Knowledge Architecture for a Shared Organizational Cortex
+  results_section: "8.5"
+
+registered_plan:
+  repository: https://github.com/withrobinhq/geometric-knowledge-paper-evals
+  tag: registered-plan
+  commit: 6aed8eeb9baa03f0f878e111f2f7e6943c51652f
+  tag_object: 11a91c53dbd380a9a7b8785e90eae7d23e9cec79
+  registered_at: 2026-10-20T16:20:07Z
+  file: evaluation-plan.md
+  sha256: 413b34d57539da0a8971a86c18a2abf533d9493d4dddf997c60e78e5358278ab
+  component_count: 19
+
+status_definitions:
+  scored_partial_record: run, scored, and reported; supporting records incomplete
+  not_run: no registered test executed
+
+components:
+  - {id: C01, name: Dimension term, section: "10.1", status: scored_partial_record}
+  - {id: C02, name: Standing penalty, section: "10.1", status: scored_partial_record}
+  - {id: C03, name: Domain scoping, section: "10.1", status: scored_partial_record}
+  - {id: C04, name: HyDE escalation, section: "10.1", status: scored_partial_record}
+  - {id: C05, name: Claims layer for artifacts, section: "10.2", status: not_run}
+  - {id: C06, name: Deriver qualification, section: "10.2", status: not_run}
+  - {id: C07, name: Signal-branch contradiction check, section: "10.3", status: not_run}
+  - {id: C08, name: Claim-branch check and position filter, section: "10.3", status: not_run}
+  - {id: C09, name: Propagation, section: "10.3", status: not_run}
+  - {id: C10, name: Automatic acceptance, section: "10.3", status: not_run}
+  - {id: C11, name: Supports verdicts, section: "10.3", status: not_run}
+  - {id: C12, name: Entailment check, section: "10.3", status: not_run}
+  - {id: C13, name: Compounding, section: "10.4", status: not_run}
+  - {id: C14, name: Staleness, section: "10.4", status: not_run}
+  - {id: C15, name: Cost ledger, section: "10.4", status: not_run}
+  - id: C16
+    name: Dimension discovery
+    section: "10.5"
+    status: not_run
+    note: Registered ordering cannot be followed on the same queries. Arm (iii) held-out results were seen before human-authored Dimensions for this component.
+  - {id: C17, name: Projector qualification, section: "10.5", status: not_run}
+  - id: C18
+    name: Router
+    section: "10.6"
+    status: not_run
+    note: Pilot call-shape observations exist and are not registered-test data.
+  - id: C19
+    name: Domain classifier
+    section: "10.6"
+    status: not_run
+    note: Pilot call-shape observations exist and are not registered-test data.
+
+retrieval_run:
+  workspace_query_counts: [91, 88, 93]
+  pooled_queries: 272
+  registered_arms: [i, ii, iii, iv, v, vi, vii, viii]
+  record_scope: surviving_summary_record
+  underlying_run_artifacts: partially_unavailable
+
+reported_component_results:
+  C01:
+    contrast: "iii - ii"
+    n: 272
+    effect_ndcg_at_10: 0.028
+    interval: [0.014, 0.056]
+    p: {operator: "=", value: 0.002}
+    reported_outcome: passes_primary_bar_on_recovered_values
+    registered_disposition: not_fully_verifiable
+    interval_note: off_centre_not_rederived
+  C02:
+    contrast: "ii - i"
+    n: 272
+    effect_ndcg_at_10: 0.032
+    interval: [0.004, 0.052]
+    p: {operator: "=", value: 0.011}
+    reported_outcome: passes_authors_recomputed_holm
+  C03:
+    contrast: "i - vi"
+    n: 272
+    effect_ndcg_at_10: 0.049
+    interval: [0.024, 0.076]
+    p: {operator: "<", value: 0.001}
+    reported_outcome: passes_authors_recomputed_holm
+  C04:
+    firing_queries: 58
+    required_firing_queries: 56
+    effect_ndcg_at_10: 0.061
+    interval: [0.018, 0.104]
+    p: {operator: "=", value: 0.003}
+    reported_outcome: passes_reported_registered_bar
+
+reported_contrasts:
+  system_signals_only:
+    contrast: "iii - v"
+    n: 251
+    effect_ndcg_at_10: 0.081
+    interval: [0.058, 0.112]
+    p: {operator: "<", value: 0.001}
+    reported_outcome: passes_authors_recomputed_holm
+  system_graph_augmented_signals_only:
+    contrast: "iii - viii"
+    n: 251
+    effect_ndcg_at_10: 0.053
+    interval: [0.033, 0.083]
+    p: {operator: "<", value: 0.001}
+    reported_outcome: passes_authors_recomputed_holm
+  graph:
+    contrast: "iii - vii"
+    n: 272
+    effect_ndcg_at_10: 0.031
+    interval: [0.009, 0.055]
+    p: {operator: "=", value: 0.004}
+    reported_outcome: passes_authors_recomputed_holm
+    plan_note: registered_plan_lists_this_gain_both_inside_and_outside_holm
+  claims_in_index:
+    contrast: "i - v"
+    n: 272
+    effect_ndcg_at_10: 0.021
+    interval: [0.001, 0.043]
+    p: {operator: "=", value: 0.020}
+    reported_outcome: reported_only
+  permutation_retention:
+    value: 0.11
+    bar: 0.5
+    reported_outcome: registered_point_attribution_check
+  per_workspace_non_inferiority:
+    worst_lower_bound: -0.018
+    margin: -0.03
+    reported_outcome: passes_on_recovered_worst_lower_bound
+    record_note: per_workspace_breakdown_withheld; bound_level_not_recorded
+
+post_hoc_analyses:
+  - id: arm_ix
+    name: facet-only
+    registration_relation: post_hoc_unregistered
+    status: scored_partial_record
+    role: post_hoc_attribution_check
+    n: 272
+    metrics:
+      ndcg_at_10: {mean: 0.464, sd: 0.224}
+      recall_at_50: {mean: 0.639}
+      mrr: {mean: 0.426}
+    contrasts:
+      vs_arm_ii: {effect: 0.011, interval: [-0.006, 0.036]}
+      arm_iii_vs_ix: {effect: 0.017, interval: [0.000, 0.040]}
+    retention: 0.39
+    proposed_post_hoc_maximum: 0.5
+    significance: position_specific_increment_reported_not_significant
+
+unavailable_records:
+  - bootstrap resamples and confidence level
+  - sequential-look records and deciding look
+  - original Holm decisions
+  - positive-control verification
+  - registered query-projection cost bound
+  - retrieval gain mapping and unjudged-item treatment
+  - Recall@50 relevance cutoff
+  - consistent per-workspace non-inferiority breakdown
+
+public_artifacts:
+  pilot: pilot/
+  results: results/

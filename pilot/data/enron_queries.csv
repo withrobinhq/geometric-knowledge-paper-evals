@@ -1,0 +1,7 @@
+query_id,query,candidates
+EQ1,"When was the CPUC expected to suspend direct access, and why did the date keep slipping?",EC01|EC07|EC24|EC05|EC27|EC06
+EQ2,What would a customer switching to direct access in mid-2001 have to pay?,EC03|EC18|EC09|EC08|EC16|EC11
+EQ3,Why did the core/noncore proposal stall?,EC14|EC13|EC12|EC29|EC21|EC04
+EQ4,How much could direct access save the state?,EC10|EC11|EC30|EC02|EC19|EC28
+EQ5,Could the CPUC have allowed limited direct access without new legislation?,EC20|EC27|EC01|EC25|EC05|EC04
+EQ6,What risks did marketers face from the CPUC's June 2001 decisions?,EC17|EC16|EC07|EC08|EC26|EC23

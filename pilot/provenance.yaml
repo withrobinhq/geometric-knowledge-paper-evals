@@ -1,0 +1,45 @@
+version: pilot-v1
+sources:
+  peps:
+    description: Python Enhancement Proposals repository
+    url: https://codeload.github.com/python/peps/tar.gz/c5f26d00ce0985c6499ec728b30f1753c48f9d3e
+    commit: c5f26d00ce0985c6499ec728b30f1753c48f9d3e
+    retrieved_utc: 2026-10-20T15:57:30Z
+    downloaded_sha256: d8d6935891b4720ccd1e555462e7bff022b4b084f7153458dda51cee9bf28c7d
+    selection:
+      candidate_topic: Packaging
+      selected_sources: 49
+    license:
+      statement: public domain or CC0-1.0-Universal
+      qualification: 48 selected PEPs carry an explicit notice; PEP 600 follows the PEP 1 policy
+  enron:
+    description: CMU Enron Email Dataset, 7 May 2015 release
+    url: https://www.cs.cmu.edu/~enron/enron_mail_20150507.tar.gz
+    retrieved_utc: 2026-10-20T16:02:52Z
+    downloaded_sha256: b3da1b3fe0369ec3140bb4fbce94702c33b7da810ec15d718b3fadf5cd748ca7
+    selection:
+      custodian: dasovich-j
+      folder: all_documents
+      selected_messages: 239
+    license:
+      statement: no written license is claimed by this release
+
+derived_material:
+  signals:
+    source_spans_verbatim: true
+    generated_headers_peps: true
+    body_signal_rule: proposition entailed by source span
+  claims:
+    count_per_domain: 30
+    fixed_pilot_inputs: true
+    system_under_evaluation_output: false
+  queries:
+    count_per_domain: 6
+    candidates_per_query: 6
+
+public_release:
+  raw_downloads_included: false
+  extracted_source_archives_included: false
+  source_email_bodies_included: false
+  superseded_runs_included: false
+  personal_annotator_names_in_judgment_files: false
