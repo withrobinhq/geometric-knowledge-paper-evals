@@ -35,4 +35,4 @@ python pilot/scripts/verify_release.py
 
 ## Licences
 
-This repository states no licence. The scorer imports krippendorff 0.9.0 (GPL-3.0-or-later). Selected PEP material is public domain or CC0-1.0-Universal; PEP 600 follows the PEP 1 policy. The CMU Enron release carries no written licence in the source archive. Cite the paper.
+This repository states no licence. The scorer imports krippendorff 0.9.0 (GPL-3.0-or-later). Selected PEP material is public domain or CC0-1.0-Universal; PEP 600 follows the PEP 1 policy. The CMU Enron release carries no written licence in the source archive. Cite the paper with `CITATION.cff`. Works cited by the plan are listed at the end of `evaluation-plan.md`.

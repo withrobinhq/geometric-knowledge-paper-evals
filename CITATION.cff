@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: Please cite the paper when using this evaluation record.
+type: dataset
+title: Compositional knowledge architecture evals
+authors:
+  - given-names: Andrew
+    family-names: Miracle
+    affiliation: Robin Inc.
+  - given-names: Phyl
+    family-names: Georgiou
+    affiliation: Robin Inc.
+  - given-names: Christine
+    family-names: Okoth
+    affiliation: Robin Inc.
+  - given-names: Ese
+    family-names: Monday
+    affiliation: Nosen
+repository-code: https://github.com/withrobinhq/geometric-knowledge-paper-evals
+url: https://github.com/withrobinhq/geometric-knowledge-paper-evals
+date-released: 2026-10-20
+identifiers:
+  - type: url
+    value: https://github.com/withrobinhq/geometric-knowledge-paper-evals/tree/registered-plan
+    description: Registered evaluation plan, tag registered-plan, 2026-10-20
+preferred-citation:
+  type: article
+  title: Toward a Compositional Knowledge Architecture for a Shared Organizational Cortex
+  authors:
+    - given-names: Andrew
+      family-names: Miracle
+      affiliation: Robin Inc.
+    - given-names: Phyl
+      family-names: Georgiou
+      affiliation: Robin Inc.
+    - given-names: Christine
+      family-names: Okoth
+      affiliation: Robin Inc.
+    - given-names: Ese
+      family-names: Monday
+      affiliation: Nosen
+  year: 2026
