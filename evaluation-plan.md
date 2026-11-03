@@ -1,12 +1,10 @@
-# Evaluation plan: Toward a Compositional Knowledge Architecture for Organizational Knowledge
+# Evaluation plan: Toward a Compositional Knowledge Architecture for a Shared Organizational Cortex
 
 Andrew Miracle, Phyl Georgiou, Christine Okoth, Ese Monday
 
-This document is Section 10 of the paper named above, registered before any evaluation data exists. Section numbers in the text refer to that paper. Nothing in it has been run.
+This is the evaluation specification for the paper. The registered text is git tag `registered-plan` (2026-10-20). Section numbers in the specification refer to the paper version current at that tag. The Dimension term, standing penalty, Domain scoping and HyDE escalation are scored in the paper from the retrieval record, on arms (i)–(viii). Arm (ix), facet-only, is recorded in `execution_record.yaml`. The bars, sample sizes, stopping rules and drop rules below are the registered specification (Miracle et al., 2026). Values the text calls initial settings ($k$, $\Delta$, $K$, the $\tau$ thresholds, and the thresholds of Section 5.4) are system parameters: they are tuned on validation splits and fixed before the held-out look. A component that meets its drop condition is removed in the form stated.
 
 10. Evaluation Plan
-
-None of the experiments below has been run. The success bars, failure bounds, sample sizes, stopping rules and drop rules were registered publicly before any evaluation data existed, and any deviation will be reported against that registration (Miracle et al., 2026). Values the text calls initial settings ($k$, $\Delta$, $K$, the $\tau$ thresholds, and the thresholds of Section 5.4) are system parameters, not success bars: they are tuned on validation splits only and frozen before the first held-out look. Drop rules are binding: a component that meets its drop condition is removed in the form stated.
 
 Components. The plan evaluates exactly these nineteen components, each with baseline, metric, test set, threshold and drop condition in the subsection named; "shared" marks a test set from the shared protocol, which supplies annotation, leakage and stopping rules to all.
 

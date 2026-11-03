@@ -2,13 +2,13 @@
 
 ## Registered plan (tag registered-plan), 2026-10-20
 
-The plan is consolidated into one general document under the paper's new title, with all four authors. Its tests are organized around writer and reader models: each model takes a role only after passing that role's qualification test, and the earlier untested premise about which model should derive becomes the Deriver's qualification test. The cost ledger and its break-even condition are kept as deployment rules. Made before any evaluation data existed; no success bar was lowered, no sample size reduced, and no stopping or drop rule loosened.
+The plan is consolidated into one general document under the paper's new title, with all four authors. Its tests are organized around writer and reader models: each model takes a role only after passing that role's qualification test, and the earlier untested premise about which model should derive becomes the Deriver's qualification test. The cost ledger and its break-even condition are kept as deployment rules.
 
 ## Version 5 (tag plan-v5), 2026-10-20
 
-Made before any evaluation data existed. The plan now states a closed list of the components it evaluates, each with its baseline, metric, test set, threshold and drop condition, and lists every other mechanism of the design with the reason it is not a separate component. Supports verdicts gain a baseline. No success bar was lowered, no sample size reduced, and no stopping or drop rule loosened.
+The plan now states a closed list of the components it evaluates, each with its baseline, metric, test set, threshold and drop condition, and lists every other mechanism of the design with the reason it is not a separate component. Supports verdicts gain a baseline.
 
-Each item is what changed in Section 10, before → after, and why. No threshold was lowered, no sample was shrunk, no stopping rule was loosened and no drop condition was softened.
+Each item is what changed in Section 10, before → after, and why.
 
 1. Registration. Before: version 4, tag plan-v4. After: "version 5 of a registration whose amendments are public", and the reference reads "Version 5 … tag plan-v5". Why: this is the fifth registered version of the plan.
 2. Closed list of components. Before: components were described subsection by subsection, and the plan did not say which mechanisms counted as components. After: a list at the top of Section 10 names exactly eighteen components. Each has its baseline, metric, test set, threshold and drop condition in the subsection named. "Shared" marks a test set supplied by the shared protocol, which also supplies annotation, leakage and stopping rules to all. Why: the plan now states its own scope.
@@ -40,9 +40,9 @@ Each item is what changed in Section 10, before → after, and why. No threshold
 
 ## Version 4 (tag plan-v4), 2026-10-16
 
-Made before any evaluation data existed. The thesis gains two ways to fail (a graph-augmented retrieval arm built without persisted Claims, and the graph pipeline baseline entering the artifact decision rule), and the propagation check gains a binding drop condition. No success bar was lowered, no sample size reduced, and no stopping or drop rule loosened.
+The thesis gains two ways to fail (a graph-augmented retrieval arm built without persisted Claims, and the graph pipeline baseline entering the artifact decision rule), and the propagation check gains a binding drop condition.
 
-Each item is what changed in Section 10, before → after, and why. No threshold was lowered, no sample was shrunk, no stopping rule was loosened and no drop condition was softened.
+Each item is what changed in Section 10, before → after, and why.
 
 1. Registration. Before: version 3, tag plan-v3. After: "version 4 of a registration whose amendments are public", and the reference reads "Version 4 … tag plan-v4". Why: this is the fourth registered version of the plan.
 2. New retrieval arm (10.1). Before: the only graph-augmented arm, (vii), joined its graph candidates to an index that holds the system's Claims. After: adds "(viii) the same graph-augmented arm built on (v), so that neither its index nor its graph holds Claims, the graph-augmented retrieval half of the alternative". Why: the alternative to persistence includes graph-augmented retrieval, so it needs an arm without Claims.
@@ -53,9 +53,9 @@ Each item is what changed in Section 10, before → after, and why. No threshold
 
 ## Version 3 (tag plan-v3), 2026-10-15
 
-Made before any evaluation data existed. The entailment check that gates every write becomes a confirmatory component with its own baseline, bar and binding drop rule; every other change adds a test, sample or consequence, corrects wording, or clarifies. No success bar was lowered, no sample size reduced, and no stopping or drop rule loosened.
+The entailment check that gates every write becomes a confirmatory component with its own baseline, bar and binding drop rule; every other change adds a test, sample or consequence, corrects wording, or clarifies.
 
-Each item is what changed in Section 10, before → after, and why. No threshold was lowered, no sample was shrunk, no stopping rule was loosened and no drop condition was softened.
+Each item is what changed in Section 10, before → after, and why.
 
 1. Registration. Before: version 2 of the registration (tag plan-v2). After: "registered publicly before any data existed, as version 3 of a registration whose amendments are public", tag plan-v3 in the reference. Why: this version of the plan is the third registered one.
 2. Graph-augmented arm (10.1, arm vii). Before: "local search in the manner of Edge et al. (2024)". After: "entity-matched local retrieval over an entity graph built as in Edge et al. (2024)". Why: the cited work builds the graph but does not describe local search. The arm's method is unchanged.
@@ -84,9 +84,9 @@ Each item is what changed in Section 10, before → after, and why. No threshold
 
 ## Version 2 (tag plan-v2), 2026-10-15
 
-Made before any evaluation data existed. Every change adds a baseline, test, margin or sample, corrects arithmetic, or clarifies wording; no success bar was lowered, no sample size reduced, and no stopping or drop rule loosened. One secondary metric (MRR) moved to exploratory. In the paper, the introduction to Section 10 now carries one sentence pointing to this registration.
+Every change adds a baseline, test, margin or sample, corrects arithmetic, or clarifies wording. One secondary metric (MRR) moved to exploratory. In the paper, the introduction to Section 10 now carries one sentence pointing to this registration.
 
-Each item is what changed in Section 10, before → after, and why. No threshold was lowered, no sample was shrunk, no stopping rule was loosened and no drop condition was softened.
+Each item is what changed in Section 10, before → after, and why.
 
 1. Registration. Before: the bars, bounds, sample sizes, stopping rules and drop rules "are fixed by this paper". After: they "were registered publicly before any data existed, do not change once held-out data has been scored, and any deviation is reported against that registration (Miracle, 2026)". Why: the plan is now fixed outside the paper.
 2. Matched budgets. Before: "Quality is compared at these matched budgets". After: quality is compared "at matched tuning budgets, not matched spend"; the system's write spend, which no baseline incurs, is charged in the 10.4 ledger. Why: says plainly what is and is not matched.

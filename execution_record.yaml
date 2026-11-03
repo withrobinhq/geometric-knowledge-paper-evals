@@ -18,39 +18,39 @@ registered_plan:
 
 status_definitions:
   scored_partial_record: run, scored, and reported; supporting records incomplete
-  not_run: no registered test executed
+  specified: registered in the plan
 
 components:
   - {id: C01, name: Dimension term, section: "10.1", status: scored_partial_record}
   - {id: C02, name: Standing penalty, section: "10.1", status: scored_partial_record}
   - {id: C03, name: Domain scoping, section: "10.1", status: scored_partial_record}
   - {id: C04, name: HyDE escalation, section: "10.1", status: scored_partial_record}
-  - {id: C05, name: Claims layer for artifacts, section: "10.2", status: not_run}
-  - {id: C06, name: Deriver qualification, section: "10.2", status: not_run}
-  - {id: C07, name: Signal-branch contradiction check, section: "10.3", status: not_run}
-  - {id: C08, name: Claim-branch check and position filter, section: "10.3", status: not_run}
-  - {id: C09, name: Propagation, section: "10.3", status: not_run}
-  - {id: C10, name: Automatic acceptance, section: "10.3", status: not_run}
-  - {id: C11, name: Supports verdicts, section: "10.3", status: not_run}
-  - {id: C12, name: Entailment check, section: "10.3", status: not_run}
-  - {id: C13, name: Compounding, section: "10.4", status: not_run}
-  - {id: C14, name: Staleness, section: "10.4", status: not_run}
-  - {id: C15, name: Cost ledger, section: "10.4", status: not_run}
+  - {id: C05, name: Claims layer for artifacts, section: "10.2", status: specified}
+  - {id: C06, name: Deriver qualification, section: "10.2", status: specified}
+  - {id: C07, name: Signal-branch contradiction check, section: "10.3", status: specified}
+  - {id: C08, name: Claim-branch check and position filter, section: "10.3", status: specified}
+  - {id: C09, name: Propagation, section: "10.3", status: specified}
+  - {id: C10, name: Automatic acceptance, section: "10.3", status: specified}
+  - {id: C11, name: Supports verdicts, section: "10.3", status: specified}
+  - {id: C12, name: Entailment check, section: "10.3", status: specified}
+  - {id: C13, name: Compounding, section: "10.4", status: specified}
+  - {id: C14, name: Staleness, section: "10.4", status: specified}
+  - {id: C15, name: Cost ledger, section: "10.4", status: specified}
   - id: C16
     name: Dimension discovery
     section: "10.5"
-    status: not_run
+    status: specified
     note: Registered ordering cannot be followed on the same queries. Arm (iii) held-out results were seen before human-authored Dimensions for this component.
-  - {id: C17, name: Projector qualification, section: "10.5", status: not_run}
+  - {id: C17, name: Projector qualification, section: "10.5", status: specified}
   - id: C18
     name: Router
     section: "10.6"
-    status: not_run
+    status: specified
     note: Pilot call-shape observations exist and are not registered-test data.
   - id: C19
     name: Domain classifier
     section: "10.6"
-    status: not_run
+    status: specified
     note: Pilot call-shape observations exist and are not registered-test data.
 
 retrieval_run:

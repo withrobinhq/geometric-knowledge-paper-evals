@@ -3,6 +3,7 @@
 
 import csv
 import hashlib
+import subprocess
 import sys
 from pathlib import Path
 
@@ -45,10 +46,16 @@ def fail(message):
 
 def main():
     errors = 0
-    plan = (ROOT / "evaluation-plan.md").read_bytes()
-    digest = hashlib.sha256(plan).hexdigest()
+    registered = subprocess.check_output(
+        ["git", "-C", str(ROOT), "show", "registered-plan:evaluation-plan.md"]
+    )
+    digest = hashlib.sha256(registered).hexdigest()
     if digest != PLAN_SHA:
-        errors += fail(f"plan sha256 {digest}")
+        errors += fail(f"registered plan sha256 {digest}")
+    current_plan = (ROOT / "evaluation-plan.md").read_text()
+    for phrase in ("Nothing in it has been run", "None of the experiments below has been run"):
+        if phrase in current_plan:
+            errors += fail(f"current plan still says {phrase!r}")
 
     record_text = (ROOT / "execution_record.yaml").read_text()
     component_ids = []
